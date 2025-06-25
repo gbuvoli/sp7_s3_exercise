@@ -12,21 +12,26 @@ st.sidebar.title("Filter Options")
 
 # Filter by Country
 countries = df['Country'].unique()
+
+
 selected_countries = st.sidebar.multiselect(
-    "Select Countries", options=countries, default=countries[0])
+    "Select Countries", options=df['Country'].unique(), default=countries[0])
+
 # Filter by Brand
 brands = df['Brand'].unique()
+
 selected_brands = st.sidebar.multiselect(
     "Select Brands", options=brands, default=brands)
+
 # Filter by Year
 years = df['Year'].unique()
+
+
 selected_years = st.sidebar.slider(
     "Select Years", min_value=int(years.min()),
-    max_value=int(years.max()), value=(int(years.min()), int(years.max())),
+    max_value=int(years.max()), value=(int(2017), int(2020)),
     step=1)
 
-# main columns
-col1, col2 = st.columns(2)
 
 # Filter the DataFrame based on selections
 filtered_df = df[
@@ -39,9 +44,17 @@ pivot = filtered_df.pivot_table(index='Year',
                                 columns='Brand',
                                 values=['Monthly_Production_Tonnes','GDP_Contribution_Million_USD'],
                                 aggfunc='sum').reset_index()
+
 # Flatten the MultiIndex columns
 pivot.columns = [' '.join(col).strip() if isinstance(col, tuple) else col for col in pivot.columns]
 
+
+
+
+
+
+# main columns
+col1, col2 = st.columns(2)
 
 col1.subheader("Production Over Time")
 # Create a line chart for production data
