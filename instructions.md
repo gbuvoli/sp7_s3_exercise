@@ -81,10 +81,25 @@ Crea un archivo nuevo que se llame `app.py`
 
 Importa las liberías necesarias
 
+> Puedes encontrar los diferentes elementos de streamlit [aquí](https://docs.streamlit.io/develop/api-reference)
+> Los gráficos de plotly express [aquí](https://plotly.com/python/plotly-express/#gallery)
+
 ``` python
 import pandas as pd
 import streamlit as st
 import plotly.express as xp
+
+# Load the dataset
+df = pd.read_csv("true_cost_fast_fashion.csv")
+
+st.header("Fast Fashion Production Analysis")
+
+
+st.sidebar.title("Filter Options")
+
+# Continua con tu propio diseño y elementos
+
+
 ```
 
 ## Paso 9: Genera el archivo requirements
