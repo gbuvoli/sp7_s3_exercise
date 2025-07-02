@@ -82,6 +82,7 @@ Crea un archivo nuevo que se llame `app.py`
 Importa las liberías necesarias
 
 > Puedes encontrar los diferentes elementos de streamlit [aquí](https://docs.streamlit.io/develop/api-reference)
+
 > Los gráficos de plotly express [aquí](https://plotly.com/python/plotly-express/#gallery)
 
 ``` python
