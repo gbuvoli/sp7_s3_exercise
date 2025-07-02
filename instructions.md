@@ -101,7 +101,8 @@ nbformat
 ##### Paso 10: Ejecuta tu aplicación de Streamlit
 En la terminal, asegúrate de que el ambiente virtual esté activo y ejecuta el siguiente comando:
 
-```bash streamlit run app.py
+```bash
+streamlit run app.py
 ```
 # Esto abrirá tu aplicación en el navegador predeterminado.
 ```
