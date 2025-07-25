@@ -54,7 +54,7 @@ Busca entre las opciones disponibles, el entorno que acabas de crear y seleccion
 
 > Asegurate de que el archivo .csv con los datos se encuentre en el mismo directorio del proyecto.
 
-## Paso 7: Carga tus datos y genera tu análisis en el notebook
+## Paso 7: Carga tus datos y genera 2 graficos en el notebook
 
 > Si necesitas instalar modulos y librerías, puedes hacerlo desde el terminal, asegurandote de tener el ambiente virtual activo.
 
